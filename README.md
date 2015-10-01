@@ -33,8 +33,15 @@ Avec cet _id_ vous pouvez également supprimer une notification :
 ```javascript
 var id = new Notify('foo');
 Notify.clear(id);
-OU
-Notify.notifs[id].clear();
+// équivaut à
+Notify.notifs[id].clear(); // via l'instance
+```
+###Notify.clearAll()
+Vous pouvez également supprimer toutes les notifications actives
+```javascript
+new Notify('foo');
+new Notify('bar');
+Notify.clearAll();
 ```
 
 ## <a name="create"></a>Paramètres
